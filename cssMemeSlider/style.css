@@ -9,52 +9,109 @@ html {
   outline: 0;
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* setup second line */
+
+.wrap-controller {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin: 20px 0;
+}
+
+.controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 80%;
   font-size: 44px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-style: bold;
   font-weight: 700px;
   color: azure;
-}
-
-.controller {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  margin: 20px 0;
+  letter-spacing: 0.06em;
 }
 
 .hidden {
   display: none;
 }
 
-.round {
+/* buttons style */
+
+/* increase click zone */
+.button {
+  display: block;
+  cursor: pointer;
   width: 30px;
   height: 30px;
-  background-color: cornflowerblue;
-  border: 4px solid cornflowerblue;
+  /* content: ""; */
+  /* background-color: transparent;
+  border-color: 4px solid #9ebbf0;
+  border-radius: 50%;*/
+  padding: 15px 15px 15px 15px;
+}
+
+/* delete standart style */
+input[type="radio"] {
+  display: none;
+  cursor: pointer;
+  height: 0px;
+  width: 0px;
+  opacity: 0;
+
+  /* position: relative;
+  height: 22px;
+  width: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; */
+}
+/* add custom style */
+span {
+  display: block;
+  cursor: pointer;
+  justify-content: center;
+  align-content: center;
+  height: 30px;
+  width: 30px;
+  background-color: #9ebbf0;
+  border: 4px solid #9ebbf0;
   border-radius: 50%;
 }
 
-/* текущая страница */
-.round:visited {
-  background-color: transparent;
-  border: 4px solid cornflowerblue;
-}
+/* label {
+  cursor: pointer;
+} */
 
-/* наведение на текущую страницу */
-.round:hover {
-  background-color: transparent;
+/*  */
+
+input[type="radio"] + span:hover {
   border: 4px solid azure;
-}
-
-/* наведение на другую страницу */
-.round:hover {
   background-color: azure;
-  border: 4px solid azure;
+  opacity: 1;
 }
 
+input[type="radio"]:checked + span {
+  background-color: transparent;
+  border: 4px solid #9ebbf0;
+  opacity: 1;
+}
+
+input[type="radio"]:checked + span:hover {
+  background-color: transparent;
+  border: 4px solid azure;
+  opacity: 1;
+}
+
+/* добавить анимацию :active по клику */
+
+/* текущая страница */
 
 .image-slider {
   display: flex;
@@ -66,8 +123,8 @@ html {
 }
 
 img {
-  height: 700px;
-  /* width: 900px; */
+  /* height: 700px; */
+  max-width: 100%;
   border-radius: 9px;
 }
 
