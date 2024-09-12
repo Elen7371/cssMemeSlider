@@ -21,8 +21,7 @@ body {
 .window {
   display: grid;
   grid-template-columns: 80% 5% 5% 5% 5%;
-  /* grid-template-columns: 48em 3em 3em 3em 3em; */
-  grid-template-rows: auto auto ;
+  grid-template-rows: auto auto;
   align-items: center;
   row-gap: 1em;
   transition: all 0.5s ease-out;
@@ -37,7 +36,6 @@ body {
   grid-row-start: 2;
   grid-row-end: 2;
 }
-
 
 /* increase click zone */
 
@@ -75,9 +73,8 @@ input:checked {
 }
 
 input:hover {
-   background-color: azure;
-   border: 0.4em solid azure;
- 
+  background-color: azure;
+  border: 0.4em solid azure;
 }
 
 input:checked:hover {
@@ -117,7 +114,7 @@ img {
 #btn-3:checked ~ .content > span#sign-3,
 #btn-4:checked ~ .content > span#sign-4 {
   display: inline;
-  opacity: 1; 
+  opacity: 1;
   font-size: 2em;
   letter-spacing: 0.06em;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -130,8 +127,8 @@ img {
 #btn-2:checked ~ .images-slider > #img-2,
 #btn-3:checked ~ .images-slider > #img-3,
 #btn-4:checked ~ .images-slider > #img-4 {
-  height: 700px;
-  width: 960px;
+  height: 44em;
+  width: 60em;
   display: flex;
   opacity: 1;
   object-fit: cover;
@@ -140,7 +137,7 @@ img {
 
 .images-slider {
   display: flex;
-  height: 700px;
+  height: 44em;
   box-sizing: border-box;
   grid-column-start: 1;
   grid-column-end: 6;
@@ -149,3 +146,97 @@ img {
   align-self: center;
   justify-self: center;
 }
+
+/* M O B I L    S T A R T*/
+@media screen and (max-width: 1024px) and (min-width: 450px) {
+
+body {
+  margin: 1em;
+}
+
+  .window {
+    display: grid;
+    grid-template-columns: 40% 5% 5% 5% 5% 40%;
+    grid-template-rows: auto auto auto;
+    width: 31em;
+  }
+
+  .images-slider {
+    width: 31em;
+    height: 23em;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  #btn-1:checked ~ .images-slider > #img-1,
+  #btn-2:checked ~ .images-slider > #img-2,
+  #btn-3:checked ~ .images-slider > #img-3,
+  #btn-4:checked ~ .images-slider > #img-4 {
+    height: 23em;
+    width: 31em;
+  }
+.content {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+
+  #btn-1:checked ~ .content > span#sign-1,
+  #btn-2:checked ~ .content > span#sign-2,
+  #btn-3:checked ~ .content > span#sign-3,
+  #btn-4:checked ~ .content > span#sign-4 {
+    font-size: 1.5em;
+  }
+
+  #btn-1 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #btn-2 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #btn-3 {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #btn-4 {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  input {
+  width: 1em;
+  height: 1em;
+  border: 0.2em solid #85a5df;
+
+}
+
+input:checked {
+  border: 0.2em solid #85a5df;
+}
+
+input:hover {
+  border: 0.2em solid azure;
+}
+
+input:checked:hover {
+  border: 0.2em solid azure;
+}
+
+input:active {
+  border: 0.2em solid white;
+}
+}
+/* M O B I L    F I N I S H */
