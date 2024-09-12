@@ -15,85 +15,72 @@
     <main>
       <section class="main">
         <div class="window">
-          <div class="grid transition-right">
-            <div class="image-slider">
-              <img
-                src="../cssMemeSlider/assets/images/about-memes.jpg"
-                alt="i will tell you some"
-              />
-              <!-- let's start! -->
-              <img
-                src="../cssMemeSlider/assets/images/this-is-fine-fire.gif"
-                alt="i am fine dog in fire"
-              />
-              <!-- deadline today? okay! -->
+          <input
+            id="btn-1"
+            type="radio"
+            class="round"
+            name="button-controller"
+            value="start"
+            checked
+          />
+          <label for="btn-1"></label>
 
-              <img
-                src="../cssMemeSlider/assets/images/another-story.jpeg"
-                alt="they wouldn't work"
-              />
-              <!-- work is not a wolf -->
-              <img
-                src="../cssMemeSlider/assets/images/js-true.png"
-                alt="the harsh truth of life"
-              />
-              <!-- the harsh truth of life -->
-            </div>
-            <div class="wrap-controller">
-              <div class="controller">
-                <div class="button">
-                    <input
-                      id="btn-1"
-                      type="radio"
-                      class="round"
-                      name="button-controller"
-                      value="start"
-                      checked
-                    />
-                    <span></span>
-                  <label class="container" for="btn-1"></label>
-                </div>
-                <div class="button">
-                
-                    <input
-                      id="btn-2"
-                      type="radio"
-                      class="round"
-                      name="button-controller"
-                      value="deadline" />
-                    <span></span> 
-                     <label class="container" for="btn-2"></label>
-                </div>
-                <div class="button">
-                 
-                    <input
-                      id="btn-3"
-                      type="radio"
-                      class="round"
-                      name="button-controller"
-                      value="wolf" />
-                    <span></span> 
-                  <label class="container" for="btn-3"></label>
-                </div>
-                <div class="button">
-                  
-                    <input
-                      id="btn-4"
-                      type="radio"
-                      class="round"
-                      name="button-controller"
-                      value="js" />
-                      <span></span>
-                    <label class="container" for="btn-4"></label>
-                </div>
-              </div>
-              <div class="content">
-                <div class="signature-1">let's start!</div>
-                <div class="signature-2 hidden">deadline today? okay!</div>
-                <div class="signature-3 hidden">work is not a wolf</div>
-                <div class="signature-4 hidden">the harsh truth of life</div>
-              </div>
-            </div>
+          <input
+            id="btn-2"
+            type="radio"
+            class="round"
+            name="button-controller"
+            value="deadline"
+          />
+          <label for="btn-2"></label>
+
+          <input
+            id="btn-3"
+            type="radio"
+            class="round"
+            name="button-controller"
+            value="wolf"
+          />
+          <label for="btn-3"></label>
+
+          <input
+            id="btn-4"
+            type="radio"
+            class="round"
+            name="button-controller"
+            value="js"
+          />
+          <label for="btn-4"></label>
+
+          <div class="content">
+            <span class="signature-1" id="sign-1">let's start!</span>
+            <span class="signature-2" id="sign-2">Deadline today? Okay!</span>
+            <span class="signature-3" id="sign-3">Work is not a wolf!</span>
+            <span class="signature-4" id="sign-4"
+              >The harsh truth of life..</span
+            >
+          </div>
+          <div class="images-slider">
+            <img
+              id="img-1"
+              src="../cssMemeSlider/assets/images/about-memes.jpg"
+              alt="i will tell you some"
+            />
+            <img
+              id="img-2"
+              src="../cssMemeSlider/assets/images/this-is-fine.gif"
+              alt="i am fine dog in fire"
+            />
+            <img
+              id="img-3"
+              src="../cssMemeSlider/assets/images/another-story.jpg"
+              alt="they wouldn't work"
+            />
+            <img
+              id="img-4"
+              src="../cssMemeSlider/assets/images/js-true.jpg"
+              alt="the harsh truth of life"
+            />
           </div>
         </div>
       </section>
