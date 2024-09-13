@@ -1,0 +1,269 @@
+/* GENERAL PROPERTIES */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(41, 40, 43);
+  height: 100%;
+  margin: 2em;
+}
+
+* {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.window {
+  display: grid;
+  grid-template-columns: 80% 5% 5% 5% 5%;
+  grid-template-rows: 44em 3em;
+  align-items: center;
+  row-gap: 1em;
+  transition: all 0.5s ease-out;
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+.content {
+  display: inline;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+/* increase click zone */
+
+/* добавить! */
+
+label {
+  content: "";
+  display: none;
+  width: 0em;
+  height: 0em;
+  padding: 1em;
+  cursor: pointer;
+}
+
+/* delete standart style */
+
+input {
+  display: inline;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  background-color: #85a5df;
+  transition: background-color 0.1s;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+  border: thick solid rgb(41, 40, 43);
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+input:checked {
+  background-color: transparent;
+  border: 0.3em solid #85a5df;
+  width: 2em;
+  height: 2em;
+  box-sizing: border-box;
+}
+
+input:hover {
+  background-color: azure;
+  border: none;
+  width: 2em;
+  height: 2em;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+input:checked:hover {
+  background-color: transparent;
+  border: 0.3em solid azure;
+  width: 2em;
+  height: 2em;
+  box-sizing: border-box;
+}
+
+input:active {
+  background-color: white;
+  border: 0.3em solid white;
+  width: 2em;
+  height: 2em;
+  box-sizing: border-box;
+}
+
+img {
+  border-radius: 0.56em;
+  display: block;
+  width: 0;
+  opacity: 0;
+  object-fit: cover;
+  transition: all 2s;
+}
+/* setting for switching */
+
+.content > span {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  opacity: 0;
+  content: none;
+  transition: all 1s;
+  height: 0;
+  width: 0;
+  white-space: 0;
+}
+
+#btn-1:checked ~ .content > span#sign-1,
+#btn-2:checked ~ .content > span#sign-2,
+#btn-3:checked ~ .content > span#sign-3,
+#btn-4:checked ~ .content > span#sign-4 {
+  display: inline;
+  opacity: 1;
+  font-size: 2em;
+  letter-spacing: 0.06em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: bold;
+  font-weight: 500;
+  color: azure;
+}
+
+#btn-1:checked ~ .images-slider > #img-1,
+#btn-2:checked ~ .images-slider > #img-2,
+#btn-3:checked ~ .images-slider > #img-3,
+#btn-4:checked ~ .images-slider > #img-4 {
+  height: 44em;
+  width: 60em;
+  display: flex;
+  opacity: 1;
+  object-fit: cover;
+  transition: all 2s;
+}
+
+.images-slider {
+  display: flex;
+  height: 44em;
+  box-sizing: border-box;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  align-self: center;
+  justify-self: center;
+}
+
+/* M O B I L    S T A R T*/
+@media screen and (max-width: 1000px) and (min-width: 450px) {
+  body {
+    margin: 0.5em;
+  }
+
+  .window {
+    display: grid;
+    grid-template-columns: 40% 5% 5% 5% 5% 40%;
+    grid-template-rows: 23em 1em 1.5em;
+    width: 30em;
+  }
+
+  .images-slider {
+    width: 30em;
+    height: 23em;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  #btn-1:checked ~ .images-slider > #img-1,
+  #btn-2:checked ~ .images-slider > #img-2,
+  #btn-3:checked ~ .images-slider > #img-3,
+  #btn-4:checked ~ .images-slider > #img-4 {
+    height: 23em;
+    width: 30em;
+  }
+  .content {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+
+  #btn-1:checked ~ .content > span#sign-1,
+  #btn-2:checked ~ .content > span#sign-2,
+  #btn-3:checked ~ .content > span#sign-3,
+  #btn-4:checked ~ .content > span#sign-4 {
+    font-size: 1.5em;
+  }
+
+  #btn-1 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #btn-2 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #btn-3 {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #btn-4 {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  input {
+    display: block;
+    width: 1.96em;
+    height: 1.96em;
+    border: thick solid rgb(41, 40, 43);
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  input:checked {
+    width: 1.2em;
+    height: 1.2em;
+    border: medium solid #85a5df;
+  }
+
+  input:hover {
+    width: 1.96em;
+    height: 1.96em;
+    border: thick solid rgb(41, 40, 43);
+    box-sizing: border-box;
+  }
+
+  input:checked:hover {
+    width: 1.2em;
+    height: 1.2em;
+    border: medium solid azure;
+  }
+
+  input:active {
+    width: 1.2em;
+    height: 1.2em;
+    box-sizing: content-box;
+    opacity: 0.2;
+  }
+}
+/* M O B I L    F I N I S H */

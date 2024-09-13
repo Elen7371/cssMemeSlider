@@ -3,7 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="description" content="Meme slider - like a way of thinking " />
+    <meta name="keywords" content="meme, joke, funny, humor" />
+
+    <title>Meme slider</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../cssMemeSlider/assets/images/meme-slider.ico" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="main">
+        <div class="window">
+          <input
+            id="btn-1"
+            type="radio"
+            class="round"
+            name="button-controller"
+            value="start"
+            checked
+          />
+          <label for="btn-1"></label>
+
+          <input
+            id="btn-2"
+            type="radio"
+            class="round"
+            name="button-controller"
+            value="deadline"
+          />
+          <label for="btn-2"></label>
+
+          <input
+            id="btn-3"
+            type="radio"
+            class="round"
+            name="button-controller"
+            value="wolf"
+          />
+          <label for="btn-3"></label>
+
+          <input
+            id="btn-4"
+            type="radio"
+            class="round"
+            name="button-controller"
+            value="js"
+          />
+          <label for="btn-4"></label>
+
+          <div class="content">
+            <span class="signature-1" id="sign-1"> let's start!</span>
+            <span class="signature-2" id="sign-2">Deadline today? Okay!</span>
+            <span class="signature-3" id="sign-3">Work is not a wolf!</span>
+            <span class="signature-4" id="sign-4"
+              >The harsh truth of life..</span
+            >
+          </div>
+          <div class="images-slider">
+            <img
+              id="img-1"
+              src="../cssMemeSlider/assets/images/about-memes.jpg"
+              alt="i will tell you some"
+            />
+            <img
+              id="img-2"
+              src="../cssMemeSlider/assets/images/this-is-fine.gif"
+              alt="i am fine dog in fire"
+            />
+            <img
+              id="img-3"
+              src="../cssMemeSlider/assets/images/another-story.jpg"
+              alt="they wouldn't work"
+            />
+            <img
+              id="img-4"
+              src="../cssMemeSlider/assets/images/js-true.jpg"
+              alt="the harsh truth of life"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
